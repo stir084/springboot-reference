@@ -22,13 +22,13 @@ public class SpringMockTest {
     @Test
     public void createOrderTest() {
 
-        Mockito.when(studentRepository.findAll()).then(invocation -> { //해당 메소드가 실행 될 때는 Mock으로 대체하기 때문에 Service 내에서 실행되는 코드가 있어야함.
-            System.out.println("I'm mock orderRepository"); //기대행위(Stub) 작성
+        Mockito.when(studentRepository.findAll()).then(invocation -> {
+            System.out.println("I'm mock orderRepository");
             return Collections.emptyList();
         });
 
 
         // when
-        studentService.getSchoolName(); //stub 되지 않은 메소드들에 대해서는 Mockito에서 Answers.RETURNS_DEFAULTS에 따라 메소드 타입별로 정의된 메소드들을 실행하게 됩니다.
+        studentService.getSchoolName();
     }
 }

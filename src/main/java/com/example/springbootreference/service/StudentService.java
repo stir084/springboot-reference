@@ -22,15 +22,8 @@ public class StudentService {
         this.studentRepository = studentRepository;
     }
 
-    /**
-     * 트랜잭션 적용 안됨
-     */
-    public void findAllSchoolNames1(){
-        getSchoolName1();
-    }
-
     @Transactional
-    public void getSchoolName1(){
+    public void getSchoolName(){
         List<Student> studentList = studentRepository.findAll();
         if(studentList.size() > 0){
             //throw new OrderDuplicateException();

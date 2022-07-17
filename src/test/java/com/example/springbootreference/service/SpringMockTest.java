@@ -29,6 +29,6 @@ public class SpringMockTest {
 
 
         // when
-        studentService.getSchoolName1(); //stub 되지 않은 메소드들에 대해서는 Mockito에서 Answers.RETURNS_DEFAULTS에 따라 메소드 타입별로 정의된 메소드들을 실행하게 됩니다.
+        studentService.getSchoolName(); //stub 되지 않은 메소드들에 대해서는 Mockito에서 Answers.RETURNS_DEFAULTS에 따라 메소드 타입별로 정의된 메소드들을 실행하게 됩니다.
     }
 }
